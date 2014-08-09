@@ -3,16 +3,27 @@
 <head lang="en">
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <meta charset="UTF-8">
     <title></title>
 </head>
 <body>
 <div ng-controller="TescoCtrl">
 
+    <div class="row">
+        <div class="col-md-3" ng-repeat="product in products.results">
+
+            <div ng-click="">
+                <img src="{{product.image_path}}">
+                {{product.name}}
+
+            </div>
+
+        </div>
+    </div>
 
     {{dupa}}
 </div>
-dupa
 </body>
 <script src="js/app.js"></script>
 </html>

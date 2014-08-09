@@ -5,8 +5,6 @@ demo.controller("TescoCtrl", function ($scope, $resource) {
         action: 'products.json'}, {callback: 'JSON_CALLBACK'},
         { get: {method: 'JSONP'}}
     );
-    $scope.dupa = $scope.tesco.get(function(result){
-
-    });
+    $scope.products = $scope.tesco.get();
 
 });
